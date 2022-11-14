@@ -64,14 +64,7 @@ void GameScene::Update()
 		if (count2 >= 5)count2 = 0;
 	}
 
-	debugText.Print("SPACE:mode", 10, 10, 1.0f);
-
-	if (count2 == 0) debugText.Print("colorful", 10, 30, 1.0f);
-	if (count2 == 1) debugText.Print("gradation", 10, 30, 1.0f);
-	if (count2 == 2) debugText.Print("hanabi", 10, 30, 1.0f);
-	if (count2 == 3) debugText.Print("snow", 10, 30, 1.0f);
-	if (count2 == 4) debugText.Print("rain", 10, 30, 1.0f);
-
+	debugText.Print("SPACE:ModeChange", 10, 10, 1.0f);
 
 	if (count2 == 0 || count2 == 1)
 	{

@@ -38,7 +38,6 @@ void Hanabi::GenerateHanabi(XMFLOAT3 pos, float scale, int lifeTime)
 		vel.y = sinf(angle) * radius * 0.01f;
 		vel.z = 0;
 
-		//d—Í‚ÉŒ©—§‚Ä‚ÄY‚Ì‚İ[-0.001f~0]‚Åƒ‰ƒ“ƒ_ƒ€‚É
 		XMFLOAT3 acc{};
 		acc.y = -0.0005f;
 
