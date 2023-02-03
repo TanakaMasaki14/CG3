@@ -80,7 +80,7 @@ void Sprite::StaticInitialize(ID3D12Device* device, int window_width, int window
 		errstr += "\n";
 		// エラー内容を出力ウィンドウに表示
 		OutputDebugStringA(errstr.c_str());
-		
+
 		assert(0);
 	}
 
@@ -188,7 +188,7 @@ void Sprite::StaticInitialize(ID3D12Device* device, int window_width, int window
 
 }
 
-void Sprite::LoadTexture(UINT texnumber, const wchar_t * filename)
+void Sprite::LoadTexture(UINT texnumber, const wchar_t* filename)
 {
 	// nullptrチェック
 	assert(device);
@@ -259,7 +259,7 @@ void Sprite::LoadTexture(UINT texnumber, const wchar_t * filename)
 
 }
 
-void Sprite::PreDraw(ID3D12GraphicsCommandList * cmdList)
+void Sprite::PreDraw(ID3D12GraphicsCommandList* cmdList)
 {
 	// PreDrawとPostDrawがペアで呼ばれていなければエラー
 	assert(Sprite::cmdList == nullptr);
@@ -281,7 +281,7 @@ void Sprite::PostDraw()
 	Sprite::cmdList = nullptr;
 }
 
-Sprite * Sprite::Create(UINT texNumber, XMFLOAT2 position, XMFLOAT4 color, XMFLOAT2 anchorpoint, bool isFlipX, bool isFlipY)
+Sprite* Sprite::Create(UINT texNumber, XMFLOAT2 position, XMFLOAT4 color, XMFLOAT2 anchorpoint, bool isFlipX, bool isFlipY)
 {
 	// 仮サイズ
 	XMFLOAT2 size = { 100.0f, 100.0f };
@@ -298,7 +298,7 @@ Sprite * Sprite::Create(UINT texNumber, XMFLOAT2 position, XMFLOAT4 color, XMFLO
 	Sprite* sprite = new Sprite(texNumber, position, size, color, anchorpoint, isFlipX, isFlipY);
 	if (sprite == nullptr) {
 		return nullptr;
-	}	
+	}
 
 	// 初期化
 	if (!sprite->Initialize()) {
@@ -464,7 +464,7 @@ void Sprite::Draw()
 void Sprite::TransferVertices()
 {
 	HRESULT result = S_FALSE;
-	
+
 	// 左下、左上、右下、右上
 	enum { LB, LT, RB, RT };
 

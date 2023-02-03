@@ -9,7 +9,7 @@
 /// </summary>
 class DebugText
 {
-public:	
+public:
 	// デバッグテキスト用のテクスチャ番号を指定
 	static const int maxCharCount = 256;	// 最大文字数
 	static const int fontWidth = 9;			// フォント画像内1文字分の横幅
@@ -21,9 +21,9 @@ public:
 
 	void Initialize(UINT texnumber);
 
-	void Print(const std::string & text, float x, float y, float size);
+	void Print(const std::string& text, float x, float y, float size);
 
-	void DrawAll(ID3D12GraphicsCommandList * cmdList);
+	void DrawAll(ID3D12GraphicsCommandList* cmdList);
 
 private:
 	// スプライトデータの配列

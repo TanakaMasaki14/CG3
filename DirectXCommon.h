@@ -13,20 +13,20 @@
 /// DirectX汎用
 /// </summary>
 class DirectXCommon {
-  public: // メンバ関数
+public: // メンバ関数
 
-	/// <summary>
-	/// シングルトンインスタンスの取得
-	/// </summary>
-	/// <returns></returns>
+  /// <summary>
+  /// シングルトンインスタンスの取得
+  /// </summary>
+  /// <returns></returns>
 	static DirectXCommon* GetInstance();
-		  
+
 	/// <summary>
 	/// 初期化
 	/// </summary>
 	void Initialize(
-	  WinApp* win, int32_t backBufferWidth = WinApp::kWindowWidth,
-	  int32_t backBufferHeight = WinApp::kWindowHeight);
+		WinApp* win, int32_t backBufferWidth = WinApp::kWindowWidth,
+		int32_t backBufferHeight = WinApp::kWindowHeight);
 
 	/// <summary>
 	/// 後始末
@@ -77,8 +77,8 @@ class DirectXCommon {
 	/// <returns>バックバッファの高さ</returns>
 	int32_t GetBackBufferHeight() const;
 
-  private: // メンバ変数
-	// ウィンドウズアプリケーション管理
+private: // メンバ変数
+  // ウィンドウズアプリケーション管理
 	WinApp* winApp_;
 
 	// Direct3D関連
@@ -98,12 +98,12 @@ class DirectXCommon {
 	int32_t backBufferWidth_ = 0;
 	int32_t backBufferHeight_ = 0;
 
-  private: // メンバ関数
+private: // メンバ関数
 	DirectXCommon() = default;
 	~DirectXCommon() = default;
 	DirectXCommon(const DirectXCommon&) = delete;
 	const DirectXCommon& operator=(const DirectXCommon&) = delete;
-		   
+
 	/// <summary>
 	/// DXGIデバイス初期化
 	/// </summary>
